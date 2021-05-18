@@ -1,0 +1,47 @@
+{
+  "name": "weight_crunch",
+  "version": "1.0.0",
+  "description": "If you need a tool/application to track your weight over time, this app will plot your weight data in to a list with a date and time associated with your submitted weight.",
+  "main": "index.js",
+  "scripts": {
+    "develop": "webpack serve --config webpack.config.js --progress",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ianferrier777/weight_crunch.git"
+  },
+  "keywords": [
+    "node",
+    "js",
+    "weight",
+    "tracker"
+  ],
+  "author": "Ian Ferrier",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ianferrier777/weight_crunch/issues"
+  },
+  "homepage": "https://github.com/ianferrier777/weight_crunch#readme",
+  "dependencies": {
+    "@babel/core": "^7.14.3",
+    "@babel/preset-env": "^7.14.2",
+    "@babel/preset-react": "^7.13.13",
+    "babel-loader": "^8.2.2",
+    "eslint-loader": "^4.0.2",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "webpack": "^5.37.0",
+    "webpack-cli": "^4.7.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.26.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-plugin-import": "^2.23.2",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-react": "^7.23.2",
+    "eslint-plugin-react-hooks": "^1.7.0",
+    "webpack-dev-server": "^3.11.2"
+  }
+}
