@@ -4,6 +4,8 @@
   "description": "If you need a tool/application to track your weight over time, this app will plot your weight data in to a list with a date and time associated with your submitted weight.",
   "main": "index.js",
   "scripts": {
+    "start": "nodemon",
+    "build": "webpack --config webpack.config.js --mode development --watch",
     "develop": "webpack serve --config webpack.config.js --progress",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -15,7 +17,8 @@
     "node",
     "js",
     "weight",
-    "tracker"
+    "tracker",
+    "health"
   ],
   "author": "Ian Ferrier",
   "license": "ISC",
@@ -28,7 +31,11 @@
     "@babel/preset-env": "^7.14.2",
     "@babel/preset-react": "^7.13.13",
     "babel-loader": "^8.2.2",
+    "body-parser": "^1.19.0",
     "eslint-loader": "^4.0.2",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.7",
+    "prop-types": "^15.7.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "webpack": "^5.37.0",

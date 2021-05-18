@@ -10,10 +10,16 @@ class App extends React.Component {
     };
   }
 
+  onWeightSubmit = (e) => {
+    e.preventDefault();
+    const weight = e.target[0].value;
+    const time = new Date();
+  }
+
   render() {
     return (
       <div>
-        <Form />
+        <Form onWeightSubmit={this.onWeightSubmit} />
         <WeightList />
       </div>
     );

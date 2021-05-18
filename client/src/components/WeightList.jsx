@@ -1,9 +1,8 @@
 import React from 'react';
 import WeightListItem from './WeightListItem';
 
-const WeightList = () => (
+const WeightList = (props) => (
   <ul>
-    WeightList
     <WeightListItem />
   </ul>
 );

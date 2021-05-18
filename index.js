@@ -1,1 +1,1 @@
-var initialize = require('./server/index.js');
+const initialize = require('./server/index');
