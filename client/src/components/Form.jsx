@@ -7,9 +7,10 @@ const Form = (props) => {
   };
   const { onWeightSubmit } = props;
   return (
-    <form onSubmit={(e) => onWeightSubmit(e)}>
+    <form id="weightForm" onSubmit={(e) => onWeightSubmit(e)}>
       <label htmlFor="weight">
         Weight (in pounds):
+        <br />
         <input type="number" id="weight" name="weight" min="1" />
       </label>
       <button type="submit" value="Submit">Submit</button>
