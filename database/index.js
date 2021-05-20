@@ -2,7 +2,8 @@ const mongoose = require('mongoose');
 const { postWeight } = require('./controllers/postWeight');
 const { getWeights } = require('./controllers/getWeights');
 
-mongoose.connect('mongodb://localhost/weight_crunch', { useNewUrlParser: true, useUnifiedTopology: true });
+const uri = process.env.MONGODB_URI;
+mongoose.connect(`mongodb://${uri}/weight_crunch`, { useNewUrlParser: true, useUnifiedTopology: true });
 
 const db = mongoose.connection;
 
