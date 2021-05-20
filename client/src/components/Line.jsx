@@ -12,7 +12,8 @@ const Line = () => (
       left: 60,
     }}
     xScale={{
-      type: 'point',
+      format: '"%Y-%m-%dT%H:%M:%S.%L%Z"',
+      type: 'time',
     }}
     yScale={{
       type: 'linear',
@@ -27,8 +28,10 @@ const Line = () => (
     axisBottom={{
       orient: 'bottom',
       tickSize: 5,
+      tickValues: 'every 1 day',
       tickPadding: 5,
       tickRotation: 0,
+      format: '%dT.%H',
       legend: 'Date',
       legendOffset: 40,
       legendPosition: 'middle',
