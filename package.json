@@ -4,10 +4,7 @@
   "description": "If you need a tool/application to track your weight over time, this app will plot your weight data in to a list with a date and time associated with your submitted weight.",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon",
-    "build": "webpack --config webpack.config.js --mode development --watch",
-    "develop": "webpack serve --config webpack.config.js --progress",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "webpack --config webpack.config.js --mode production && node index.js"
   },
   "repository": {
     "type": "git",
