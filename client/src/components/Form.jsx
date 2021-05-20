@@ -11,7 +11,7 @@ const Form = (props) => {
       <label htmlFor="weight">
         Weight (in pounds):
         <br />
-        <input type="number" id="weight" name="weight" min="1" />
+        <input type="number" id="weight" name="weight" step="0.01" min="1" />
       </label>
       <button type="submit" value="Submit">Submit</button>
     </form>

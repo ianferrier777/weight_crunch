@@ -1,1 +1,1 @@
-const initialize = require('./server/index');
+const application = require('./server/index');
