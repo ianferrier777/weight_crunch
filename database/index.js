@@ -3,7 +3,7 @@ const { postWeight } = require('./controllers/postWeight');
 const { getWeights } = require('./controllers/getWeights');
 
 const uri = process.env.MONGODB_URI;
-mongoose.connect(`${uri}/weight_crunch`, { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect(`${uri}`, { useNewUrlParser: true, useUnifiedTopology: true });
 
 const db = mongoose.connection;
 
