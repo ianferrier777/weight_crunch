@@ -6,13 +6,6 @@ module.exports = {
     path: path.resolve(__dirname, 'client', 'dist'),
     filename: 'bundle.js',
   },
-  devtool: 'source-map',
-  devServer: {
-    contentBase: path.resolve(__dirname, 'client', 'dist'),
-    open: true,
-    clientLogLevel: 'silent',
-    port: 9000,
-  },
   module: {
     rules: [
       {
@@ -28,11 +21,6 @@ module.exports = {
               }],
               '@babel/preset-react',
             ],
-          },
-        }, {
-          loader: 'eslint-loader',
-          options: {
-            fix: true,
           },
         }],
       },
