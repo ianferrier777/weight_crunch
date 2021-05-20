@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const { postWeight } = require('./controllers/postWeight');
 const { getWeights } = require('./controllers/getWeights');
 
-const uri = process.env.MONGODB_URI;
+const uri = process.env.MONGODB_URI || 'mongodb://localhost:27017/myapp';
 mongoose.connect(`${uri}`, { useNewUrlParser: true, useUnifiedTopology: true });
 
 const db = mongoose.connection;

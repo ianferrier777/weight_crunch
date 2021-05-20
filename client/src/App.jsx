@@ -45,7 +45,7 @@ class App extends React.Component {
 
   weightsRequest = () => {
     let { weightList, getSuccess } = this.state;
-    const { postSuccess } = this.state;
+    const { postSuccess, chartData } = this.state;
     axios.get('/weight')
       .then((response) => {
         getSuccess = true;
@@ -57,7 +57,16 @@ class App extends React.Component {
           };
           return readableWeightObj;
         });
-        this.setState({ weightList, getSuccess, postSuccess });
+        chartData[0].data = response.data.map((weightObj) => {
+          const xAndY = {};
+          const timeRefactor = new Date(weightObj.time).getTime();
+          xAndY.x = timeRefactor;
+          xAndY.y = Number(weightObj.weight);
+          return xAndY;
+        });
+        this.setState({
+          weightList, chartData, getSuccess, postSuccess,
+        });
       })
       .catch(() => {
         getSuccess = false;
@@ -70,12 +79,14 @@ class App extends React.Component {
   }
 
   render() {
-    const { weightList, getSuccess, postSuccess } = this.state;
+    const {
+      weightList, chartData, getSuccess, postSuccess,
+    } = this.state;
     return (
       <div>
         <h1>Weight Crunch</h1>
         <div style={{ height: '40vh', width: '50vw' }}>
-          <Line />
+          <Line chartData={chartData} />
         </div>
         <h2>Weight Submit</h2>
         <Form onWeightSubmit={this.onWeightSubmit} />

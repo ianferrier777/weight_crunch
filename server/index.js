@@ -4,7 +4,7 @@ const path = require('path');
 const { db, postWeight, getWeights } = require('../database/index');
 
 const app = express();
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 8000;
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
