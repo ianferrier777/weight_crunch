@@ -36,7 +36,8 @@ bower_components
 
 # Compiled Dirs (http://nodejs.org/api/addons.html)
 build/
-dist/
+client/dist/bundle.js
+client/dist/bundle.js.map
 
 # Compiled binary addons (https://nodejs.org/api/addons.html)
 build/Release
@@ -84,7 +85,6 @@ typings/
 
 # Nuxt.js build / generate output
 .nuxt
-dist
 
 # Gatsby files
 .cache/
